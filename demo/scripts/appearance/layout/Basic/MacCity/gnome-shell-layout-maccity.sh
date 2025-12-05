@@ -4,6 +4,16 @@
 
 
 ##
+## ## Extension / reset
+##
+
+dconf reset -f /org/gnome/shell/extensions/dash-to-panel/
+dconf reset -f /org/gnome/shell/extensions/dash-to-dock/
+
+
+
+
+##
 ## ## Disable Extensions
 ##
 
@@ -42,9 +52,9 @@ gsettings set org.gnome.desktop.wm.preferences button-layout "'close,minimize,ma
 ## ## Extension / dash-to-panel
 ##
 
-dconf write /org/gnome/shell/extensions/dash-to-panel/panel-lengths '{"AUO-0x00000000":100,"unknown-unknown":100}'
-dconf write /org/gnome/shell/extensions/dash-to-panel/panel-positions '{"AUO-0x00000000":"TOP","unknown-unknown":"TOP"}'
-dconf write /org/gnome/shell/extensions/dash-to-panel/panel-sizes '{"AUO-0x00000000":48}'
+#dconf write /org/gnome/shell/extensions/dash-to-panel/panel-lengths '{"AUO-0x00000000":100,"unknown-unknown":100}'
+#dconf write /org/gnome/shell/extensions/dash-to-panel/panel-positions '{"AUO-0x00000000":"TOP","unknown-unknown":"TOP"}'
+#dconf write /org/gnome/shell/extensions/dash-to-panel/panel-sizes '{"AUO-0x00000000":48}'
 
 
 
@@ -53,7 +63,7 @@ dconf write /org/gnome/shell/extensions/dash-to-panel/panel-sizes '{"AUO-0x00000
 ## ## Extension / dash-to-panel
 ##
 
-dconf write /org/gnome/shell/extensions/dash-to-dock/dock-position "'BOTTOM'"
+#dconf write /org/gnome/shell/extensions/dash-to-dock/dock-position "'BOTTOM'"
 
 
 

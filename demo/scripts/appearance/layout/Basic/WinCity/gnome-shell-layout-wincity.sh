@@ -4,6 +4,16 @@
 
 
 ##
+## ## Extension / reset
+##
+
+dconf reset -f /org/gnome/shell/extensions/dash-to-panel/
+dconf reset -f /org/gnome/shell/extensions/dash-to-dock/
+
+
+
+
+##
 ## ## Disable Extensions
 ##
 
@@ -40,9 +50,9 @@ gsettings set org.gnome.desktop.wm.preferences button-layout "'appmenu:minimize,
 ## ## Extension / dash-to-panel
 ##
 
-dconf write /org/gnome/shell/extensions/dash-to-panel/panel-lengths '{"AUO-0x00000000":70,"unknown-unknown":70}'
-dconf write /org/gnome/shell/extensions/dash-to-panel/panel-positions "'{}'"
-dconf write /org/gnome/shell/extensions/dash-to-panel/panel-sizes '{"AUO-0x00000000":48}'
+#dconf write /org/gnome/shell/extensions/dash-to-panel/panel-lengths '{"AUO-0x00000000":70,"unknown-unknown":70}'
+#dconf write /org/gnome/shell/extensions/dash-to-panel/panel-positions "'{}'"
+#dconf write /org/gnome/shell/extensions/dash-to-panel/panel-sizes '{"AUO-0x00000000":48}'
 
 
 
@@ -51,7 +61,7 @@ dconf write /org/gnome/shell/extensions/dash-to-panel/panel-sizes '{"AUO-0x00000
 ## ## Extension / dash-to-dock
 ##
 
-dconf write /org/gnome/shell/extensions/dash-to-dock/dock-position "'TOP'"
+#dconf write /org/gnome/shell/extensions/dash-to-dock/dock-position "'TOP'"
 
 
 
