@@ -51,7 +51,7 @@ mod_gnome_shell_extension_enable_dash_to_panel () {
 
 mod_gnome_shell_extension_enable_prerun_dash_to_panel () {
 
-	mod_gnome_shell_extension_reset_for_dash_to_dock
+	mod_gnome_shell_extension_reset_for_dash_to_panel
 
 	return 0
 }
@@ -64,6 +64,52 @@ mod_gnome_shell_extension_enable_dorun_dash_to_panel () {
 }
 
 mod_gnome_shell_extension_enable_postrun_dash_to_panel () {
+
+	mod_gnome_shell_extension_config_for_dash_to_panel
+
+	return 0
+}
+
+
+
+
+##
+## ## Gnome Shell / Extension / dash-to-panel / config
+##
+
+mod_gnome_shell_extension_reset_for_dash_to_panel () {
+
+	dconf reset -f /org/gnome/shell/extensions/dash-to-panel/
+
+}
+
+mod_gnome_shell_extension_config_for_dash_to_panel () {
+
+	#mod_gnome_shell_extension_config_for_dash_to_panel_via_gsettings
+
+	mod_gnome_shell_extension_config_for_dash_to_panel_via_dconf
+	
+	return 0
+}
+
+
+mod_gnome_shell_extension_config_for_dash_to_panel_via_gsettings () {
+
+	##
+	## ## Adjust for [Window / Close] (conflict `Super+q`)
+	##
+
+	dconf write /org/gnome/shell/extensions/dash-to-panel/shortcut "['<Super>0']"
+	dconf write /org/gnome/shell/extensions/dash-to-panel/shortcut-text "'<Super>0'"
+
+
+	return 0
+}
+
+
+mod_gnome_shell_extension_config_for_dash_to_panel_via_dconf () {
+
+
 
 	return 0
 }
