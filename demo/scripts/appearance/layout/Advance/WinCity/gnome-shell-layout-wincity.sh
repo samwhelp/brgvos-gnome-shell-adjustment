@@ -1,15 +1,39 @@
 #!/usr/bin/env bash
 
 
+
+##
+## ## Gnome Shell / Extensions / Management
+##
+
+mod_gnome_shell_extensions_disable () {
+
+	return 0
+}
+
+
+mod_gnome_shell_extensions_enable () {
+
+	return 0
+}
+
+
+
+
 ##
 ## ## Gnome Shell / Config / Layout
 ##
 
 mod_gnome_shell_config_for_layout () {
 
+	mod_gnome_shell_extensions_disable
+
+	mod_gnome_shell_extensions_enable
 
 	return 0
 }
+
+
 
 
 ##
