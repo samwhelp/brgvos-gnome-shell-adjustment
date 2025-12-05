@@ -35,6 +35,19 @@ mod_gnome_shell_extensions_just_enable () {
 
 
 ##
+## ## Gnome Shell / Extensions / conflict_resolution
+##
+
+mod_gnome_shell_config_for_conflict_resolution () {
+
+
+	return 0
+}
+
+
+
+
+##
 ## ## Gnome Shell / Extension / dash-to-panel / disable
 ##
 
@@ -404,6 +417,9 @@ mod_gnome_shell_extensions_enable () {
 
 
 	mod_gnome_shell_extensions_just_enable
+
+
+	mod_gnome_shell_config_for_conflict_resolution
 
 
 	return 0
