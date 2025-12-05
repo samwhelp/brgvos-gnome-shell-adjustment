@@ -24,7 +24,7 @@ mod_gnome_shell_extensions_just_disable () {
 
 mod_gnome_shell_extensions_just_enable () {
 
-	gnome-extensions enable 'logomenu@aryan_k'
+	#gnome-extensions enable 'logomenu@aryan_k'
 	gnome-extensions enable 'space-bar@luchrioh'
 	gnome-extensions enable 'tiling-assistant@leleat-on-github'
 
