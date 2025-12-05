@@ -176,8 +176,6 @@ mod_gnome_shell_extension_disable_dorun_dash_to_dock () {
 
 mod_gnome_shell_extension_disable_postrun_dash_to_dock () {
 
-	mod_gnome_shell_extension_config_for_dash_to_dock
-
 	return 0
 }
 
