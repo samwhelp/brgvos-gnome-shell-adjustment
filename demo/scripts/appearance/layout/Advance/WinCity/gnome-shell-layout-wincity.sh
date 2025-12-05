@@ -70,16 +70,91 @@ mod_gnome_shell_extension_disable_postrun_dash_to_panel () {
 
 
 ##
+## ## Gnome Shell / Extension / dash-to-dock / enable
+##
+
+mod_gnome_shell_extension_enable_dash_to_dock () {
+
+	mod_gnome_shell_extension_enable_prerun_dash_to_dock
+	mod_gnome_shell_extension_enable_dorun_dash_to_dock
+	mod_gnome_shell_extension_enable_postrun_dash_to_dock
+
+	return 0
+}
+
+mod_gnome_shell_extension_enable_prerun_dash_to_dock () {
+
+	return 0
+}
+
+mod_gnome_shell_extension_enable_dorun_dash_to_dock () {
+	
+	gnome-extensions enable 'dash-to-dock@micxgx.gmail.com'
+
+	return 0
+}
+
+mod_gnome_shell_extension_enable_postrun_dash_to_dock () {
+
+	return 0
+}
+
+
+
+
+##
+## ## Gnome Shell / Extension / dash-to-dock / disable
+##
+
+mod_gnome_shell_extension_disable_dash_to_dock () {
+
+	mod_gnome_shell_extension_disable_prerun_dash_to_dock
+	mod_gnome_shell_extension_disable_dorun_dash_to_dock
+	mod_gnome_shell_extension_disable_postrun_dash_to_dock
+
+	return 0
+}
+
+mod_gnome_shell_extension_disable_prerun_dash_to_dock () {
+
+	return 0
+}
+
+mod_gnome_shell_extension_disable_dorun_dash_to_dock () {
+	
+	gnome-extensions disable 'dash-to-dock@micxgx.gmail.com'
+
+	return 0
+}
+
+mod_gnome_shell_extension_disable_postrun_dash_to_dock () {
+
+	return 0
+}
+
+
+
+
+##
+##
 ## ## Gnome Shell / Extensions / Management
 ##
 
 mod_gnome_shell_extensions_disable () {
+
+	mod_gnome_shell_extension_disable_dash_to_panel
+	
+	mod_gnome_shell_extension_disable_dash_to_dock
 
 	return 0
 }
 
 
 mod_gnome_shell_extensions_enable () {
+
+	mod_gnome_shell_extension_enable_dash_to_panel
+	
+	#mod_gnome_shell_extension_enable_dash_to_dock
 
 	return 0
 }
