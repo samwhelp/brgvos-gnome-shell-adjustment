@@ -65,6 +65,7 @@ mod_gnome_shell_extension_enable_dorun_dash_to_panel () {
 
 mod_gnome_shell_extension_enable_postrun_dash_to_panel () {
 
+
 	mod_gnome_shell_extension_config_for_dash_to_panel
 
 	return 0
@@ -95,20 +96,20 @@ mod_gnome_shell_extension_config_for_dash_to_panel () {
 
 mod_gnome_shell_extension_config_for_dash_to_panel_via_gsettings () {
 
-	##
-	## ## Adjust for [Window / Close] (conflict `Super+q`)
-	##
-
-	dconf write /org/gnome/shell/extensions/dash-to-panel/shortcut "['<Super>0']"
-	dconf write /org/gnome/shell/extensions/dash-to-panel/shortcut-text "'<Super>0'"
-
-
 	return 0
 }
 
 
 mod_gnome_shell_extension_config_for_dash_to_panel_via_dconf () {
 
+
+	##
+	## ## Adjust for [Window / Close] (conflict `Super+q`)
+	##
+
+
+	dconf write /org/gnome/shell/extensions/dash-to-panel/shortcut "['<Super>0']"
+	dconf write /org/gnome/shell/extensions/dash-to-panel/shortcut-text "'<Super>0'"
 
 
 	return 0
