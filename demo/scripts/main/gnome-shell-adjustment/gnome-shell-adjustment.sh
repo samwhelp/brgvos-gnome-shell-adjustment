@@ -445,7 +445,16 @@ mod_gnome_shell_config_for_favorite_apps () {
 	return 0
 }
 
+
 mod_gnome_shell_extension_config_for_dash_to_dock () {
+
+	mod_gnome_shell_extension_config_for_dash_to_dock_via_gsettings
+	
+	return 0
+}
+
+
+mod_gnome_shell_extension_config_for_dash_to_dock_via_gsettings () {
 
 
 	#gsettings set org.gnome.shell.extensions.dash-to-dock shortcut "['<Super><Control>q']"
