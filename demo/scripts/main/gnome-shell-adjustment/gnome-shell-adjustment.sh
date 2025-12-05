@@ -419,6 +419,23 @@ mod_gnome_shell_config_for_conflict_resolution () {
 
 
 
+	##
+	## ## Adjust for [Window / Maximize] (conflict `Super+w`)
+	##
+
+	dconf write /org/gnome/shell/extensions/space-bar/shortcuts/activate-empty-key "['']"
+
+	dconf write /org/gnome/shell/extensions/space-bar/shortcuts/activate-previous-key  "['']"
+
+	dconf write /org/gnome/shell/extensions/space-bar/shortcuts/enable-activate-workspace-shortcuts false
+
+	dconf write /org/gnome/shell/extensions/space-bar/shortcuts/enable-move-to-workspace-shortcuts false
+
+	dconf write /org/gnome/shell/extensions/space-bar/shortcuts/open-menu "['']"
+
+
+
+
 	return 0
 }
 
