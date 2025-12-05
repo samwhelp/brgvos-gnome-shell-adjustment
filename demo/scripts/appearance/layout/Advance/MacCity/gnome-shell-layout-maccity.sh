@@ -35,6 +35,34 @@ mod_gnome_shell_extensions_just_enable () {
 
 
 ##
+## ## Gnome Shell / Extensions / conflict_resolution
+##
+
+mod_gnome_shell_config_for_conflict_resolution () {
+
+	##
+	## ## space-bar
+	##
+
+
+	dconf write /org/gnome/shell/extensions/space-bar/shortcuts/activate-empty-key "['']"
+
+	dconf write /org/gnome/shell/extensions/space-bar/shortcuts/activate-previous-key  "['']"
+
+	dconf write /org/gnome/shell/extensions/space-bar/shortcuts/enable-activate-workspace-shortcuts false
+
+	dconf write /org/gnome/shell/extensions/space-bar/shortcuts/enable-move-to-workspace-shortcuts false
+
+	dconf write /org/gnome/shell/extensions/space-bar/shortcuts/open-menu "['']"
+
+
+	return 0
+}
+
+
+
+
+##
 ## ## Gnome Shell / Extension / dash-to-panel / disable
 ##
 
@@ -404,6 +432,9 @@ mod_gnome_shell_extensions_enable () {
 
 
 	mod_gnome_shell_extensions_just_enable
+
+
+	mod_gnome_shell_config_for_conflict_resolution
 
 
 	return 0
