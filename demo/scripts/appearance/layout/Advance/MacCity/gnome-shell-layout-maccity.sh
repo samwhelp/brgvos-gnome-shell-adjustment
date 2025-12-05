@@ -51,6 +51,8 @@ mod_gnome_shell_extension_enable_dash_to_panel () {
 
 mod_gnome_shell_extension_enable_prerun_dash_to_panel () {
 
+	mod_gnome_shell_extension_reset_for_dash_to_dock
+
 	return 0
 }
 
@@ -119,6 +121,8 @@ mod_gnome_shell_extension_enable_dash_to_dock () {
 
 mod_gnome_shell_extension_enable_prerun_dash_to_dock () {
 
+	mod_gnome_shell_extension_reset_for_dash_to_dock
+
 	return 0
 }
 
@@ -142,6 +146,12 @@ mod_gnome_shell_extension_enable_postrun_dash_to_dock () {
 ##
 ## ## Gnome Shell / Extension / dash-to-dock / config
 ##
+
+mod_gnome_shell_extension_reset_for_dash_to_dock () {
+
+	dconf reset -f /org/gnome/shell/extensions/dash-to-dock/
+
+}
 
 mod_gnome_shell_extension_config_for_dash_to_dock () {
 
