@@ -4,6 +4,37 @@
 
 
 ##
+## ## Gnome Shell / Extensions / just disable
+##
+
+mod_gnome_shell_extensions_just_disable () {
+
+	gnome-extensions disable 'mediacontrols@cliffniff.github.com'
+	gnome-extensions disable 'arcmenu@arcmenu.com'
+	gnome-extensions disable 'tilingshell@ferrarodomenico.com'
+
+	return 0
+}
+
+
+
+##
+## ## Gnome Shell / Extensions / just enable
+##
+
+mod_gnome_shell_extensions_just_enable () {
+
+	gnome-extensions enable 'logomenu@aryan_k'
+	gnome-extensions enable 'space-bar@luchrioh'
+	gnome-extensions enable 'tiling-assistant@leleat-on-github'
+
+	return 0
+}
+
+
+
+
+##
 ## ## Gnome Shell / Extension / dash-to-panel / disable
 ##
 
@@ -341,6 +372,12 @@ mod_gnome_shell_extension_config_for_dash_to_dock_via_dconf () {
 
 mod_gnome_shell_extensions_disable () {
 
+
+	mod_gnome_shell_extensions_just_disable
+
+
+
+
 	mod_gnome_shell_extension_disable_dash_to_panel
 	
 	mod_gnome_shell_extension_disable_dash_to_dock
@@ -351,9 +388,25 @@ mod_gnome_shell_extensions_disable () {
 
 mod_gnome_shell_extensions_enable () {
 
+	
+	##
+	## dash_to_panel for layout_wincity
+	##
+
 	#mod_gnome_shell_extension_enable_dash_to_panel
 	
+	
+	##
+	## dash_to_dock for layout_maccity
+	##
+
 	mod_gnome_shell_extension_enable_dash_to_dock
+
+
+
+
+	mod_gnome_shell_extensions_just_enable
+
 
 	return 0
 }

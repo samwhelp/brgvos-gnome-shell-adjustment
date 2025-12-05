@@ -388,8 +388,18 @@ mod_gnome_shell_extensions_disable () {
 
 mod_gnome_shell_extensions_enable () {
 
+	
+	##
+	## dash_to_panel for layout_wincity
+	##
+
 	mod_gnome_shell_extension_enable_dash_to_panel
 	
+	
+	##
+	## dash_to_dock for layout_maccity
+	##
+
 	#mod_gnome_shell_extension_enable_dash_to_dock
 
 
