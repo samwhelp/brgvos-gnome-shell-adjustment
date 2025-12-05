@@ -962,7 +962,7 @@ mod_tool_gnome_text_editor_config () {
 
 	gsettings set org.gnome.TextEditor style-variant 'follow'
 
-	gsettings set org.gnome.TextEditor tab-width 8
+	gsettings set org.gnome.TextEditor tab-width 4
 
 	gsettings set org.gnome.TextEditor use-system-font false
 
