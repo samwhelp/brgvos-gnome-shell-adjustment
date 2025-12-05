@@ -51,6 +51,8 @@ mod_gnome_shell_extension_enable_dash_to_panel () {
 
 mod_gnome_shell_extension_enable_prerun_dash_to_panel () {
 
+	mod_gnome_shell_extension_reset_for_dash_to_dock
+
 	return 0
 }
 
@@ -96,6 +98,8 @@ mod_gnome_shell_extension_disable_dorun_dash_to_dock () {
 
 mod_gnome_shell_extension_disable_postrun_dash_to_dock () {
 
+	mod_gnome_shell_extension_config_for_dash_to_dock
+
 	return 0
 }
 
@@ -117,6 +121,8 @@ mod_gnome_shell_extension_enable_dash_to_dock () {
 
 mod_gnome_shell_extension_enable_prerun_dash_to_dock () {
 
+	mod_gnome_shell_extension_reset_for_dash_to_dock
+
 	return 0
 }
 
@@ -128,6 +134,152 @@ mod_gnome_shell_extension_enable_dorun_dash_to_dock () {
 }
 
 mod_gnome_shell_extension_enable_postrun_dash_to_dock () {
+
+	mod_gnome_shell_extension_config_for_dash_to_dock
+
+	return 0
+}
+
+
+
+
+##
+## ## Gnome Shell / Extension / dash-to-dock / config
+##
+
+mod_gnome_shell_extension_reset_for_dash_to_dock () {
+
+	dconf reset -f /org/gnome/shell/extensions/dash-to-dock/
+
+}
+
+mod_gnome_shell_extension_config_for_dash_to_dock () {
+
+	#mod_gnome_shell_extension_config_for_dash_to_dock_via_gsettings
+
+	mod_gnome_shell_extension_config_for_dash_to_dock_via_dconf
+	
+	return 0
+}
+
+
+mod_gnome_shell_extension_config_for_dash_to_dock_via_gsettings () {
+
+
+	#gsettings set org.gnome.shell.extensions.dash-to-dock shortcut "['<Super><Control>q']"
+
+	#gsettings set org.gnome.shell.extensions.dash-to-dock dock-position "'BOTTOM'"
+
+
+
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock apply-custom-theme false
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock autohide false
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock autohide-in-fullscreen true
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock background-color "'#ffffff'"
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock background-opacity 0.8
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock click-action "'cycle-windows'"
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 36
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed true
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock dock-position "'BOTTOM'"
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock isolate-locations true
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock middle-click-action "'launch'"
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock scroll-action "'cycle-windows'"
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock shift-click-action "'previews'"
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock shift-middle-click-action "'quit'"
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock shortcut "['']"
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock shortcut-text "''"
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock show-mounts false
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock show-show-apps-button true
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock show-windows-preview false
+
+	gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode "'DYNAMIC'"
+
+
+
+
+	return 0
+}
+
+
+mod_gnome_shell_extension_config_for_dash_to_dock_via_dconf () {
+
+
+	#dconf write /org/gnome/shell/extensions/dash-to-dock/shortcut "['<Super><Control>q']"
+
+	#dconf write /org/gnome/shell/extensions/dash-to-dock/dock-position "'BOTTOM'"
+
+
+
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/apply-custom-theme false
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/autohide false
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/autohide-in-fullscreen true
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/background-color "'#ffffff'"
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/background-opacity 0.8
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/click-action "'cycle-windows'"
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size 36
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed true
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/dock-position "'BOTTOM'"
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/extend-height false
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/isolate-locations true
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/middle-click-action "'launch'"
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/scroll-action "'cycle-windows'"
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/shift-click-action "'previews'"
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/shift-middle-click-action "'quit'"
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/shortcut "['']"
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/shortcut-text "''"
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/show-mounts false
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/show-show-apps-button true
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/show-trash false
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/show-windows-preview false
+
+	dconf write /org/gnome/shell/extensions/dash-to-dock/transparency-mode "'DYNAMIC'"
+
+
+
 
 	return 0
 }
