@@ -19,7 +19,7 @@
 ## Subject
 
 * [Script](#script)
-* [Gnome Shell Layout Switcher](#gnome-shell layout-switcher)
+* [Gnome Shell Layout Switcher](#gnome-shell-layout-switcher)
 * [Link](#link)
 
 
