@@ -17,6 +17,8 @@ has_children: true
 | GitHub / [brgvos-void](https://github.com/florintanasa/brgvos-void) |
 | GitHub / [brgvos-installer](https://github.com/florintanasa/brgvos-installer) |
 | SourceForge / BRGV-OS / [Files](https://sourceforge.net/projects/brgv-os/files/)|
+| BRGV-OS / [Wiki](https://github.com/florintanasa/brgvos-void/wiki) |
+| BRGV-OS / [Discussions](https://github.com/florintanasa/brgvos-void/discussions) |
 | YouTube / [Florin Tanasa](https://www.youtube.com/channel/UCfwSU8kkGVOubW2RYaPqX-g) |
 
 
