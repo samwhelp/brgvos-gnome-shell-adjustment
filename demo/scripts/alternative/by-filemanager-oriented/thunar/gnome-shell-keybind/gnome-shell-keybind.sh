@@ -278,7 +278,7 @@ mod_gnome_shell_config_for_keybind_custom () {
 
 	## ### Text Editor
 	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/text-editor/name "'Text_Editor'"
-	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/text-editor/command "'subl'"
+	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/text-editor/command "'gnome-text-editor'"
 	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/text-editor/binding "'<Shift><Alt>e'"
 
 
@@ -454,7 +454,7 @@ mod_gnome_shell_config_for_system_config_quick () {
 mod_gnome_shell_config_for_favorite_apps () {
 
 
-	gsettings set org.gnome.shell favorite-apps "['thunar.desktop', 'sublime_text.desktop', 'firefox.desktop', 'xfce4-terminal.desktop', 'org.gnome.Settings.desktop', 'org.gnome.tweaks.desktop']"
+	gsettings set org.gnome.shell favorite-apps "['thunar.desktop', 'org.gnome.TextEditor.desktop', 'firefox.desktop', 'xfce4-terminal.desktop', 'org.gnome.Settings.desktop', 'org.gnome.tweaks.desktop']"
 
 
 	return 0
